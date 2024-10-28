@@ -23,7 +23,9 @@ themeHandlerButtons.forEach(button => {
 
 window.addEventListener('load', () => {
     let darkMode = localStorage.getItem('dark') == 'true' ? true : false
-    if (darkMode) {
+    let prefersUserTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+
+    if (darkMode || prefersUserTheme) {
         document.documentElement.classList.add('dark')
     } else {
         document.documentElement.classList.remove('dark')
