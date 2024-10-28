@@ -596,3 +596,7 @@ video {
 body {
   font-family: IRANYekanX, sans-serif;
 }
+
+.h-screen {
+  height: 100vh;
+}
