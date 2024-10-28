@@ -30,7 +30,7 @@ module.exports = {
         },
         text: {
           primaryLight: '#14161D', // رنگ اصلی متن در حالت روشن
-          primaryDark: colors.white,  // رنگ اصلی متن در حالت تاریک
+          primaryDark: '#9E9E9E',  // رنگ اصلی متن در حالت تاریک
           secondaryLight: '#1A2029', // رنگ ثانویه متن در حالت روشن
           secondaryDark: '#ADADAD', // رنگ ثانویه متن در حالت تاریک
         },

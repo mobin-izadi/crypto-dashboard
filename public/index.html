@@ -164,7 +164,7 @@
     </main>
     <!-- start sidebar -->
     <aside
-        class="h-full  col-start-1 col-end-2 row-start-1 -row-end-1 fixed top-0 right-0 w-[17.8%] border-l shadow-sidebar p-[30px] flex flex-col justify-between ">
+        class="h-full  col-start-1 col-end-2 row-start-1 -row-end-1 fixed top-0 right-0 w-[17.8%] border-l shadow-sidebar p-[30px] flex flex-col justify-between dark:bg-background-cardDark ">
         <!-- up sidebar -->
         <div>
             <!-- logo -->
@@ -172,47 +172,47 @@
                 <svg class="w-16 h-16">
                     <use href="#logo"></use>
                 </svg>
-                <h1 class="font-bold text-3xl">کریپتو</h1>
+                <h1 class="font-bold text-3xl dark:text-white">کریپتو</h1>
             </div>
             <!-- menu -->
             <ul class="space-y-2">
                 <li
-                    class="flex items-center gap-5 transition-all hover:bg-primary-blue rounded-[10px] p-3 hover:text-white group">
+                    class="flex items-center gap-5 transition-all hover:bg-primary-blue rounded-[10px] p-3 hover:text-white group dark:text-text-primaryDark dark:hover:text-white">
                     <svg class="w-8 h-8 text-inherit group-hover:scale-110 transition-all">
                         <use href="#dashboard"></use>
                     </svg>
                     <a href="" class="text-lg group-hover:scale-110 transition-all">داشبورد</a>
                 </li>
                 <li
-                    class="flex items-center gap-5 transition-all hover:bg-primary-blue rounded-[10px] p-3 hover:text-white group">
+                    class="flex items-center gap-5 transition-all hover:bg-primary-blue rounded-[10px] p-3 hover:text-white group dark:text-text-primaryDark dark:hover:text-white">
                     <svg class="w-8 h-8 text-inherit group-hover:scale-110 transition-all">
                         <use href="#chart"></use>
                     </svg>
                     <a href="" class="text-lg group-hover:scale-110 transition-all">نمودار</a>
                 </li>
                 <li
-                    class="flex items-center gap-5 transition-all hover:bg-primary-blue rounded-[10px] p-3 hover:text-white group">
+                    class="flex items-center gap-5 transition-all hover:bg-primary-blue rounded-[10px] p-3 hover:text-white group dark:text-text-primaryDark dark:hover:text-white">
                     <svg class="w-8 h-8 text-inherit group-hover:scale-110 transition-all">
                         <use href="#transactions"></use>
                     </svg>
                     <a href="" class="text-lg group-hover:scale-110 transition-all">تراکنش ها</a>
                 </li>
                 <li
-                    class="flex items-center gap-5 transition-all hover:bg-primary-blue rounded-[10px] p-3 hover:text-white group">
+                    class="flex items-center gap-5 transition-all hover:bg-primary-blue rounded-[10px] p-3 hover:text-white group dark:text-text-primaryDark dark:hover:text-white">
                     <svg class="w-8 h-8 text-inherit group-hover:scale-110 transition-all">
                         <use href="#wallet"></use>
                     </svg>
                     <a href="" class="text-lg group-hover:scale-110 transition-all">کیف پول</a>
                 </li>
                 <li
-                    class="flex items-center gap-5 transition-all hover:bg-primary-blue rounded-[10px] p-3 hover:text-white group">
+                    class="flex items-center gap-5 transition-all hover:bg-primary-blue rounded-[10px] p-3 hover:text-white group dark:text-text-primaryDark dark:hover:text-white">
                     <svg class="w-8 h-8 text-inherit group-hover:scale-110 transition-all">
                         <use href="#chat"></use>
                     </svg>
                     <a href="" class="text-lg group-hover:scale-110 transition-all">اخبار</a>
                 </li>
                 <li
-                    class="flex items-center gap-5 transition-all hover:bg-primary-blue rounded-[10px] p-3 hover:text-white group">
+                    class="flex items-center gap-5 transition-all hover:bg-primary-blue rounded-[10px] p-3 hover:text-white group dark:text-text-primaryDark dark:hover:text-white">
                     <svg class="w-8 h-8 text-inherit group-hover:scale-110 transition-all">
                         <use href="#mail"></use>
                     </svg>
@@ -223,27 +223,31 @@
         <!-- down sidebar -->
         <ul class="space-y-2">
             <li
-                class="flex items-center gap-5 transition-all hover:bg-primary-blue rounded-[10px] p-3 hover:text-white group">
+                class="flex items-center gap-5 transition-all hover:bg-primary-blue rounded-[10px] p-3 hover:text-white group dark:text-text-primaryDark dark:hover:text-white">
                 <svg class="w-8 h-8 text-inherit group-hover:scale-110 transition-all">
                     <use href="#setting"></use>
                 </svg>
                 <a href="" class="text-lg group-hover:scale-110 transition-all">تنظیمات</a>
             </li>
             <li
-                class="flex items-center gap-5 transition-all hover:bg-primary-blue rounded-[10px] p-3 hover:text-white group !mb-5">
+                class="flex items-center gap-5 transition-all hover:bg-primary-blue rounded-[10px] p-3 hover:text-white group dark:text-text-primaryDark dark:hover:text-white !mb-5">
                 <svg class="w-8 h-8 text-inherit group-hover:scale-110 transition-all">
                     <use href="#logout"></use>
                 </svg>
                 <a href="" class="text-lg group-hover:scale-110 transition-all">خروج</a>
             </li>
-            <li class="flex items-center gap-2">
-                <button class="flex items-center gap-2 bg-white p-[10px] rounded-lg">
+            <li class="flex items-center justify-around gap-2 dark:text-text-primaryDark">
+                <button
+                    class="flex items-center gap-2  p-[10px] rounded-lg theme-mode  basis-1/2 bg-white dark:bg-transparent"
+                    data-mode="light">
                     <svg class="w-5 h-5">
                         <use href="#light"></use>
                     </svg>
                     روشن
                 </button>
-                <button class="flex items-center gap-2  p-[10px] rounded-lg">
+                <button
+                    class="flex items-center gap-2  p-[10px] rounded-lg theme-mode basis-1/2 bg-transparent dark:bg-background-dark"
+                    data-mode="dark">
                     <svg class="w-5 h-5">
                         <use href="#moon"></use>
                     </svg>
@@ -255,7 +259,7 @@
 
     </aside>
 
-
+    <script src="scripts/app.js"></script>
 </body>
 
 </html>
