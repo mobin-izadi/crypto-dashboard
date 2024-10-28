@@ -34,6 +34,10 @@ module.exports = {
           secondaryLight: '#1A2029', // رنگ ثانویه متن در حالت روشن
           secondaryDark: '#ADADAD', // رنگ ثانویه متن در حالت تاریک
         },
+      },
+      boxShadow: {
+        sidebar: '-2px 0px 2px 0px rgba(0, 0, 0, 0.12)',
+        header: '0px 2px 2px 0px rgba(0, 0, 0, 0.12)',
       }
     },
   },
