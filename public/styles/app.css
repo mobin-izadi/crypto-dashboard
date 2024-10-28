@@ -600,3 +600,13 @@ body {
 .h-screen {
   height: 100vh;
 }
+
+.bg-background-light {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 248 248 / var(--tw-bg-opacity));
+}
+
+.dark\:bg-background-dark:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 22 29 / var(--tw-bg-opacity));
+}
