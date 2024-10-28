@@ -189,23 +189,25 @@
         <!-- title -->
         <h3 class="font-bold text-3xl">داشبورد</h3>
         <!-- search -->
-        <div class="flex justify-between items-center h-11 rounded px-5 py-2 bg-white min-w-[450px]">
-            <input type="text" placeholder="جستجو..." class="w-full h-full outline-none border-none">
-            <svg class="w-6 h-6">
+        <div
+            class="flex justify-between items-center h-11 rounded px-5 py-2 bg-white dark:bg-background-cardDark min-w-[450px]">
+            <input type="text" placeholder="جستجو..." class="w-full h-full outline-none border-none bg-transparent">
+            <svg class="w-6 h-6 dark:text-text-primaryDark">
                 <use href="#search"></use>
             </svg>
         </div>
         <!-- panel -->
         <div class="flex justify-between gap-2 items-center">
             <!-- notific -->
-            <div class="w-11 h-11 rounded bg-white flex justify-center items-center relative group">
+            <div
+                class="w-11 h-11 rounded bg-white dark:bg-background-cardDark flex justify-center items-center relative group">
                 <span class="block w-2 h-2 bg-primary-orange border rounded-full absolute top-3 right-3 "></span>
-                <svg class="w-6 h-6 cursor-pointer">
+                <svg class="w-6 h-6 cursor-pointer dark:text-text-primaryDark">
                     <use href="#bell"></use>
                 </svg>
                 <!-- List of notifications -->
                 <ul
-                    class="absolute top-[72px] bg-white rounded-lg h-40 w-36 md:w-80 p-2 font-light text-sm overflow-y-auto notific-wrapper space-y-1 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all delay-100">
+                    class="absolute top-[72px] bg-white dark:bg-background-cardDark rounded-lg h-40 w-36 md:w-80 p-2 font-light text-sm overflow-y-auto notific-wrapper space-y-1 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all delay-100">
                     <li class="line-clamp-2 border-b py-2 hover:text-green-500">
                         <a href="" class="text-inherit">واریزی جدید شما با موفقیت به حسابتان نشست.</a>
                     </li>
@@ -221,7 +223,7 @@
             <div class="flex justify-between items-center gap-3 mr-8 relative">
                 <img src="images/profile.png" class="w-11 h-11 object-cover rounded-full overflow-hidden" alt="">
                 <div class="flex items-end gap-3 cursor-pointer">
-                    <span>مبین ایزدی</span>
+                    <span class="font-light">مبین ایزدی</span>
                     <svg class="w-6 h-6 text-text-primaryDark">
                         <use href="#arrow-down"></use>
                     </svg>
