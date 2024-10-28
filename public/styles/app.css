@@ -554,7 +554,45 @@ video {
   display: none;
 }
 
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+@font-face {
+  font-family: IRANYekanX;
+
+  font-display: swap;
+
+  font-style: normal;
+
+  font-weight: 300;
+
+  src: url('../fonts/iran-yekan/woff/IRANYekanX-Light.woff') format('woff'),
+            url('../fonts/iran-yekan/woff2/IRANYekanX-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: IRANYekanX;
+
+  font-display: swap;
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  src: url('../fonts/iran-yekan/woff/IRANYekanX-Bold.woff') format('woff'),
+            url('../fonts/iran-yekan/woff2/IRANYekanX-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: IRANYekanX;
+
+  font-display: swap;
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  src: url('../fonts/iran-yekan/woff/IRANYekanX-Regular.woff') format('woff'),
+            url('../fonts/iran-yekan/woff2/IRANYekanX-Regular.woff2') format('woff2');
+}
+
+body {
+  font-family: IRANYekanX, sans-serif;
 }
