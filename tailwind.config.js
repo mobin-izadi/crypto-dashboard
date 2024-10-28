@@ -36,8 +36,8 @@ module.exports = {
         },
       },
       boxShadow: {
-        sidebar: '-2px 0px 2px 0px rgba(0, 0, 0, 0.12)',
-        header: '0px 2px 2px 0px rgba(0, 0, 0, 0.12)',
+        sidebar: '-1px 0px 2px 0px rgba(0, 0, 0, 0.12)',
+        header: '0px 1px 2px 0px rgba(0, 0, 0, 0.12)',
       }
     },
   },
