@@ -207,7 +207,7 @@
                 </svg>
                 <!-- List of notifications -->
                 <ul
-                    class="absolute top-[72px] bg-white dark:bg-background-cardDark rounded-lg h-40 w-36 md:w-80 p-2 font-light text-sm overflow-y-auto notific-wrapper space-y-1 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all delay-100">
+                    class="absolute top-14 bg-white dark:bg-background-cardDark rounded-lg h-40 w-36 md:w-80 p-2 font-light text-sm overflow-y-auto notific-wrapper space-y-1 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all delay-100">
                     <li class="pb-2 border-b">اعلان ها</li>
                     <li class=" py-2 bg-gray-200 dark:bg-gray-600 rounded px-1 hover:text-green-500 ">
                         <a href="" class="text-inherit line-clamp-1">واریزی جدید شما با موفقیت به حسابتان نشست واریزی
@@ -224,11 +224,44 @@
             <!-- profile -->
             <div class="flex justify-between items-center gap-3 mr-8 relative">
                 <img src="images/profile.png" class="w-11 h-11 object-cover rounded-full overflow-hidden" alt="">
-                <div class="flex items-end gap-3 cursor-pointer">
+                <div class="flex items-end gap-3 cursor-pointer relative group">
                     <span class="font-light">مبین ایزدی</span>
                     <svg class="w-6 h-6 text-text-primaryDark">
                         <use href="#arrow-down"></use>
                     </svg>
+                    <ul
+                        class="bg-white rounded-lg absolute top-12 left-0 w-40 p-2 space-y-3 transition-all delay-100 opacity-0 group-hover:opacity-100 invisible group-hover:visible">
+                        <li class="flex  items-center gap-1">
+                            <svg class="w-5 h-5 text-inherit ">
+                                <use href="#dashboard"></use>
+                            </svg>
+                            <a href="">داشبورد</a>
+                        </li>
+                        <li class="flex  items-center gap-1">
+                            <svg class="w-5 h-5 text-inherit ">
+                                <use href="#chart"></use>
+                            </svg>
+                            <a href="">نمودار ها</a>
+                        </li>
+                        <li class="flex  items-center gap-1">
+                            <svg class="w-5 h-5 text-inherit ">
+                                <use href="#mail"></use>
+                            </svg>
+                            <a href="">صندوق پیام ها</a>
+                        </li>
+                        <li class="flex  items-center gap-1">
+                            <svg class="w-5 h-5 text-inherit ">
+                                <use href="#setting"></use>
+                            </svg>
+                            <a href="">تنظیمات</a>
+                        </li>
+                        <li class="flex  items-center gap-1">
+                            <svg class="w-5 h-5 text-inherit ">
+                                <use href="#logout"></use>
+                            </svg>
+                            <a href="">خروج</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 

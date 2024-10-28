@@ -657,6 +657,22 @@ body {
   top: 72px;
 }
 
+.top-7 {
+  top: 1.75rem;
+}
+
+.top-12 {
+  top: 3rem;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.top-14 {
+  top: 3.5rem;
+}
+
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
@@ -799,6 +815,14 @@ body {
   width: 100%;
 }
 
+.w-52 {
+  width: 13rem;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
 .min-w-\[450px\] {
   min-width: 450px;
 }
@@ -855,6 +879,10 @@ body {
   gap: 1.25rem;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
@@ -865,6 +893,12 @@ body {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
