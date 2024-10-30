@@ -182,6 +182,18 @@
                     fill="currentColor"></path>
             </g>
         </symbol>
+        <symbol id="close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+                <path opacity="0.5"
+                    d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                    fill="currentColor"></path>
+                <path
+                    d="M8.96967 8.96967C9.26256 8.67678 9.73744 8.67678 10.0303 8.96967L12 10.9394L13.9697 8.96969C14.2626 8.6768 14.7374 8.6768 15.0303 8.96969C15.3232 9.26258 15.3232 9.73746 15.0303 10.0304L13.0607 12L15.0303 13.9696C15.3232 14.2625 15.3232 14.7374 15.0303 15.0303C14.7374 15.3232 14.2625 15.3232 13.9696 15.0303L12 13.0607L10.0304 15.0303C9.73746 15.3232 9.26258 15.3232 8.96969 15.0303C8.6768 14.7374 8.6768 14.2626 8.96969 13.9697L10.9394 12L8.96967 10.0303C8.67678 9.73744 8.67678 9.26256 8.96967 8.96967Z"
+                    fill="currentColor"></path>
+            </g>
+        </symbol>
     </svg>
     <!-- start header -->
     <header
@@ -370,6 +382,29 @@
         </ul>
 
     </aside>
+    <!-- modal -->
+    <div
+        class="fixed inset-0 flex justify-center items-center bg-white/10 dark:bg-background-dark/10 backdrop-blur-sm hidden modal">
+        <div class="w-80 md:w-[600px]  bg-white dark:bg-background-cardDark rounded-lg p-3 dark:text-white">
+            <button class="modal__close-btn">
+                <svg class="w-7 h-7 pointer-events-none">
+                    <use href="#close"></use>
+                </svg>
+            </button>
+            <!-- modal massage -->
+            <div class="my-3">
+                <span> به نظر می‌رسد که بطور پیشفرض از حالت تیره استفاده می‌کنید! آیا دوست دارید سایت هم در حالت تیره
+                    نمایش داده
+                    شود؟</span>
+            </div>
+            <div class="flex gap-2 justify-center md:justify-end flex-wrap">
+                <button class="bg-green-500 rounded-md py-3  text-white w-44 modal__agree-btn">بله، دارک مود فعال
+                    باشد</button>
+                <button class="bg-red-500 rounded-md py-3  text-white w-44 modal__close-btn">خیر، حالت روشن
+                    بماند</button>
+            </div>
+        </div>
+    </div>
 
     <script src="scripts/app.js"></script>
 </body>
