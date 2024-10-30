@@ -9,7 +9,7 @@
 </head>
 
 <body
-    class=" bg-background-light dark:bg-background-dark  min-h-screen grid grid-rows-[auto,1fr] grid-cols-[17.8%,82.2%] ">
+    class=" bg-background-light dark:bg-background-dark  min-h-screen grid grid-rows-[auto,1fr] grid-cols-[0,100%] lg:grid-cols-[22.8%,77.2%]  xl:grid-cols-[17.8%,82.2%] ">
     <!-- svg -->
     <svg class="hidden">
         <symbol id="logo" viewBox="0 -0.5 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -202,7 +202,7 @@
         <h3 class="font-bold text-3xl">داشبورد</h3>
         <!-- search -->
         <div
-            class="flex justify-between items-center h-11 rounded px-5 py-2 bg-white dark:bg-background-cardDark min-w-[450px]">
+            class="flex justify-between items-center h-11 rounded px-5 py-2 bg-white dark:bg-background-cardDark basis-1/3">
             <input type="text" placeholder="جستجو..." class="w-full h-full outline-none border-none bg-transparent">
             <svg class="w-6 h-6 dark:text-text-primaryDark">
                 <use href="#search"></use>
@@ -288,7 +288,7 @@
     </main>
     <!-- start sidebar -->
     <aside
-        class="h-full  col-start-1 col-end-2 row-start-1 -row-end-1 fixed top-0 right-0 w-[17.8%] border-l dark:border-l-background-dark shadow-sidebar p-[30px] flex flex-col justify-between dark:bg-background-cardDark ">
+        class="h-full  col-start-1 col-end-2 row-start-1 -row-end-1 fixed top-0 right-0 hidden  lg:w-[22.8%] xl:w-[17.8%] border-l dark:border-l-background-dark shadow-sidebar p-[30px] lg:flex flex-col justify-between dark:bg-background-cardDark ">
         <!-- up sidebar -->
         <div>
             <!-- logo -->
@@ -360,9 +360,10 @@
                 </svg>
                 <a href="" class="text-lg group-hover:scale-110 transition-all">خروج</a>
             </li>
-            <li class="flex items-center justify-around gap-2 dark:text-text-primaryDark">
+            <li
+                class="flex items-center justify-center xl:justify-around gap-2 flex-wrap xl:flex-nowrap dark:text-text-primaryDark">
                 <button
-                    class="flex items-center gap-2  p-[10px] rounded-lg theme-mode  basis-1/2 bg-white dark:bg-transparent"
+                    class="flex items-center gap-2  p-[10px] rounded-lg theme-mode  basis-full xl:basis-1/2 bg-white dark:bg-transparent"
                     data-mode="light">
                     <svg class="w-5 h-5">
                         <use href="#light"></use>
@@ -370,7 +371,7 @@
                     روشن
                 </button>
                 <button
-                    class="flex items-center gap-2  p-[10px] rounded-lg theme-mode basis-1/2 bg-transparent dark:bg-background-dark"
+                    class="flex items-center gap-2  p-[10px] rounded-lg theme-mode basis-full xl:basis-1/2 bg-transparent dark:bg-background-dark"
                     data-mode="dark">
                     <svg class="w-5 h-5">
                         <use href="#moon"></use>
