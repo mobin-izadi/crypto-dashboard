@@ -1045,6 +1045,10 @@ body {
   padding: 0.25rem;
 }
 
+.p-7 {
+  padding: 1.75rem;
+}
+
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -1278,6 +1282,21 @@ body {
 
   .lg\:grid-cols-\[22\.8\%\2c 77\.2\%\] {
     grid-template-columns: 22.8% 77.2%;
+  }
+
+  .lg\:p-0 {
+    padding: 0px;
+  }
+
+  .lg\:px-9 {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+
+  .lg\:shadow-header {
+    --tw-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12);
+    --tw-shadow-colored: 0px 1px 2px 0px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }
 

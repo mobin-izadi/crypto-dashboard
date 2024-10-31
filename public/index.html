@@ -9,7 +9,7 @@
 </head>
 
 <body
-    class=" bg-background-light dark:bg-background-dark  min-h-screen grid grid-rows-[auto,1fr] grid-cols-[0,100%] lg:grid-cols-[22.8%,77.2%]  xl:grid-cols-[17.8%,82.2%] ">
+    class=" bg-background-light dark:bg-background-dark  min-h-screen grid grid-rows-[auto,1fr] grid-cols-[0,100%] lg:grid-cols-[22.8%,77.2%]  xl:grid-cols-[17.8%,82.2%] p-7 lg:p-0 ">
     <!-- svg -->
     <svg class="hidden">
         <symbol id="logo" viewBox="0 -0.5 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -215,7 +215,7 @@
     </svg>
     <!-- start header -->
     <header
-        class="col-span-1 col-start-2 h-[100px] border-b dark:border-b-background-cardDark shadow-header text-text-primaryLight dark:text-white flex justify-between items-center gap-4 px-9 ">
+        class="col-span-1 col-start-2 h-[100px] border-b dark:border-b-background-cardDark lg:shadow-header text-text-primaryLight dark:text-white flex justify-between items-center gap-4 lg:px-9 ">
         <!-- mobile menu btn -->
         <button class="lg:hidden border p-1 rounded-lg text-gray-400 border-gray-600">
             <svg class="w-8 h-8">
@@ -306,7 +306,7 @@
     <main class="col-span-1 col-start-2 ">
         <!-- search mobile -->
         <div
-            class="flex lg:hidden justify-between items-center h-11 rounded px-5 py-2 bg-white dark:bg-background-cardDark w-10/12 mx-auto mt-8">
+            class="flex lg:hidden justify-between items-center h-11 rounded px-5 py-2 bg-white dark:bg-background-cardDark w-full mx-auto mt-8">
             <input type="text" placeholder="جستجو..." class="w-full h-full outline-none border-none bg-transparent">
             <svg class="w-6 h-6 dark:text-text-primaryDark">
                 <use href="#search"></use>
