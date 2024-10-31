@@ -1,8 +1,15 @@
+//public var
+const blurEffect = document.querySelector('.blur')
+
 // theme handler
 const themeHandlerButtons = document.querySelectorAll('.theme-mode')
 const modal = document.querySelector('.modal')
 const modalClosesBtn = document.querySelectorAll('.modal__close-btn')
 const modalAgreeBtn = document.querySelector('.modal__agree-btn')
+// mobile menu
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn')
+const sidebarWrapper = document.querySelector('.sidebar')
+
 
 
 
@@ -21,6 +28,15 @@ function themeModeHandler(event) {
 // modal show control
 function modalShowControl() {
     localStorage.setItem('showModal', false)
+}
+// mobile menu
+function showMobileMenu() {
+    sidebarWrapper.classList.remove('hidden')
+    blurEffect.classList.remove('hidden')
+}
+function hiddenMobileMenu() {
+    sidebarWrapper.classList.add('hidden')
+    blurEffect.classList.add('hidden')
 }
 // +++++++++++++++++++++++++++++++++++event++++++++++++++++++++++++++
 
@@ -66,3 +82,8 @@ modalAgreeBtn.addEventListener('click', () => {
     localStorage.setItem('dark', true)
     document.documentElement.classList.add('dark')
 })
+
+// mobile menu
+mobileMenuBtn.addEventListener('click', showMobileMenu)
+blurEffect.addEventListener('click', hiddenMobileMenu)
+

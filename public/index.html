@@ -217,7 +217,7 @@
     <header
         class="col-span-1 col-start-2 h-[100px] border-b dark:border-b-background-cardDark lg:shadow-header text-text-primaryLight dark:text-white flex justify-between items-center gap-4 lg:px-9 ">
         <!-- mobile menu btn -->
-        <button class="lg:hidden border p-1 rounded-lg text-gray-400 border-gray-600">
+        <button class="lg:hidden border p-1 rounded-lg text-gray-400 border-gray-600 mobile-menu-btn">
             <svg class="w-8 h-8">
                 <use href="#menu"></use>
             </svg>
@@ -316,7 +316,7 @@
     </main>
     <!-- start sidebar -->
     <aside
-        class="h-full  col-start-1 col-end-2 row-start-1 -row-end-1 fixed top-0 right-0 hidden  lg:w-[22.8%] xl:w-[17.8%] border-l dark:border-l-background-dark shadow-sidebar p-[30px] lg:flex flex-col justify-between dark:bg-background-cardDark ">
+        class="h-full  col-start-1 col-end-2 row-start-1 -row-end-1 fixed top-0 right-0 hidden  lg:w-[22.8%] xl:w-[17.8%] border-l dark:border-l-background-dark shadow-sidebar p-[30px] lg:flex flex-col justify-between bg-background-light dark:bg-background-cardDark sidebar overflow-y-auto z-50">
         <!-- up sidebar -->
         <div>
             <!-- logo -->
@@ -434,6 +434,11 @@
             </div>
         </div>
     </div>
+    <!-- blur -->
+    <div class="blur fixed inset-0 bg-white/10 dark:bg-background-dark/10 backdrop-blur-sm z-20 hidden ">
+
+    </div>
+
 
     <script src="scripts/app.js"></script>
 </body>
