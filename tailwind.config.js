@@ -4,6 +4,9 @@ module.exports = {
   darkMode: 'class',
   content: ["./public/**/*.{html,js}"],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       fontFamily: {
         iranyekan: ['IRANYekanX', 'sans-serif'],
