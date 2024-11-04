@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+    #chart-area tspan {
+        @apply dark:stroke-zinc-300
+    }
 
     /* width */
     .notific-wrapper::-webkit-scrollbar {
