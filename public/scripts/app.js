@@ -5,10 +5,6 @@ const assetToman = document.querySelector('.asset__t')
 const assetDollar = document.querySelector('.asset__d')
 let asset = 3_500_000
 let assetConvertToDollar = asset / 60_000
-
-
-
-
 //********************************************************* functions
 function assetShowHandler() {
     assetToman.innerHTML = asset.toLocaleString()
