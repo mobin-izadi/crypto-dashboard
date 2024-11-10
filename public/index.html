@@ -732,12 +732,13 @@
                 <!-- coins -->
                 <div class="grid grid-cols-2 gap-7">
                     <!-- coin box -->
-                    <div class="bg-white rounded-2xl py-6 px-5">
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl py-6 px-5">
                         <!-- coin box head -->
                         <div class="flex justify-between items-center ">
                             <div class="flex items-center gap-5">
                                 <!-- coin box icon -->
-                                <div class="flex justify-center items-center w-11 h-11 rounded-lg bg-gray-100 ">
+                                <div
+                                    class="flex justify-center items-center w-11 h-11 rounded-lg bg-gray-100 dark:bg-gray-700 ">
                                     <svg class="w-6 h-6">
                                         <use href="#bitcoin"></use>
                                     </svg>
@@ -754,9 +755,9 @@
                         </div>
                         <!-- coin box footer -->
                         <div class="flex items-center justify-between mt-5">
-                            <div id="bitcoin-chart">
+                            <div id="bitcoin-chart" class="dark:text-black">
                             </div>
-                            <div class="flex flex-col justify-center gap-4 ">
+                            <div class="flex flex-col items-center gap-4 " dir="ltr">
                                 <span class="text-xl">$52,291</span>
                                 <span class="text-green-500 font-light text-sm">+0.25%</span>
                             </div>

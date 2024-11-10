@@ -149,7 +149,7 @@ function assetHiddenHandler() {
 (function coinsCharts() {
     var options = {
         series: [{
-            name: "Data",
+            name: "BTC",
             data: [10, 15, 8, 12, 18, 14, 20] // مقادیر نمونه
         }],
         chart: {
