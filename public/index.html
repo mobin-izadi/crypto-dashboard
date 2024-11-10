@@ -594,15 +594,16 @@
                         </div>
                     </div>
                     <!-- Operation main -->
-                    <div class=" flex justify-between items-end gap-6 mt-5 ">
-                        <div class="flex flex-col basis-4/5 ">
-                            <span class="dark:text-zinc-300 mb-1">پرداختی شما</span>
+                    <div
+                        class=" flex 2xl:justify-between justify-center flex-wrap md:flex-nowrap lg:flex-wrap 2xl:flex-nowrap items-end gap-6 mt-5 ">
+                        <div class="flex flex-col basis-full md:basis-3/4 lg:basis-full 2xl:basis-4/5 ">
+                            <span class="dark:text-zinc-300 mb-1 ">پرداختی شما</span>
                             <div
-                                class="bg-gray-100 dark:bg-gray-900 rounded-lg flex items-center justify-between gap-3 px-2 py-1.5">
+                                class="bg-gray-100 dark:bg-gray-900 rounded-lg flex items-center justify-center sm:justify-between gap-3 flex-wrap sm:flex-nowrap px-2 py-1.5">
                                 <!-- Digital currency list  -->
-                                <div>
+                                <div class="basis-1/4 sm:basis-auto">
                                     <div
-                                        class="flex justify-center items-center rounded-lg px-2 py-1 gap-2 bg-white dark:bg-gray-800 cursor-pointer">
+                                        class="flex justify-center items-center rounded-lg px-2 py-1 gap-2 bg-white dark:bg-gray-800 cursor-pointer shadow-lg">
                                         <svg class="w-4 h-4">
                                             <use href="#tether"></use>
                                         </svg>
@@ -612,26 +613,28 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <div>
+                                <div
+                                    class="flex justify-center sm:justify-start flex-wrap basis-full sm:basis-auto sm:flex-nowrap gap-3 sm:gap-7">
                                     <input type="number"
-                                        class="bg-transparent max-w-44 ml-7 border dark:border-gray-800 rounded-lg p-1 outline-none "
+                                        class="bg-transparent sm:max-w-44  border dark:border-gray-800 rounded-lg p-1 outline-none basis-full sm:basis-auto"
                                         placeholder="مقدار" dir="ltr">
-                                    <button class="bg-purple-400 text-black text-sm rounded-3xl py-1 px-2">
-                                        بیشترین</button>
+                                    <button
+                                        class="bg-purple-400 text-white  text-sm rounded-3xl  basis-1/4 sm:basis-auto py-2 sm:py-1 px-2">
+                                        Max</button>
                                 </div>
                             </div>
-                            <button class="w-6 h-6 mx-auto mt-1 ">
-                                <svg class="w-6 h-6 rotate-90">
+                            <button class="w-6 h-6 mx-auto my-2 ">
+                                <svg class="w-6 h-full rotate-90">
                                     <use href="#swap"></use>
                                 </svg>
                             </button>
-                            <span class="dark:text-zinc-300 mb-1">دریافتی شما</span>
+                            <span class="dark:text-zinc-300 mb-1 -mt-7">دریافتی شما</span>
                             <div
-                                class="bg-gray-100 dark:bg-gray-900 rounded-lg flex items-center justify-between gap-3 px-2 py-1.5">
+                                class="bg-gray-100 dark:bg-gray-900 rounded-lg flex items-center justify-center sm:justify-between gap-3 flex-wrap sm:flex-nowrap px-2 py-1.5">
                                 <!-- Digital currency list  -->
-                                <div>
+                                <div class="basis-1/4 sm:basis-auto">
                                     <div
-                                        class="flex justify-center items-center rounded-lg px-2 py-1 gap-2 bg-white dark:bg-gray-800 cursor-pointer">
+                                        class="flex justify-center items-center rounded-lg px-2 py-1 gap-2 bg-white dark:bg-gray-800 cursor-pointer shadow-lg">
                                         <svg class="w-4 h-4">
                                             <use href="#logo"></use>
                                         </svg>
@@ -641,17 +644,19 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <div>
+                                <div
+                                    class="flex justify-center sm:justify-start flex-wrap basis-full sm:basis-auto sm:flex-nowrap gap-3 sm:gap-7">
                                     <input type="number"
-                                        class="bg-transparent max-w-44 ml-7 border dark:border-gray-800 rounded-lg p-1 outline-none "
+                                        class="bg-transparent sm:max-w-44  border dark:border-gray-800 rounded-lg p-1 outline-none basis-full sm:basis-auto "
                                         placeholder="مقدار" dir="ltr" readonly>
-                                    <button class="bg-purple-400 text-black text-sm rounded-3xl py-1 px-2">
-                                        بیشترین</button>
+                                    <button
+                                        class="bg-purple-400 text-white  text-sm rounded-3xl  basis-1/4 sm:basis-auto py-2 sm:py-1 px-2">
+                                        Max</button>
                                 </div>
                             </div>
                         </div>
                         <button
-                            class="text-white bg-slate-700 rounded-lg flex justify-center items-center basis-1/5 aspect-square text-lg ">
+                            class="text-white bg-slate-700 rounded-lg flex justify-center items-center basis-full md:basis-1/4 lg:basis-full 2xl:basis-1/5 py-4 2xl:py-0 md:aspect-square lg:aspect-auto 2xl:aspect-square text-lg ">
                             خرید بیتکوین
                         </button>
                     </div>
