@@ -147,7 +147,7 @@ function assetHiddenHandler() {
 })();
 // create coins charts
 (function coinsCharts() {
-    var options = {
+    let optionsBtc = {
         series: [{
             name: "BTC",
             data: [10, 15, 8, 12, 18, 14, 20] // مقادیر نمونه
@@ -189,9 +189,144 @@ function assetHiddenHandler() {
             show: false // پنهان کردن خطوط شبکه
         }
     };
+    let optionsLtc = {
+        series: [{
+            name: "LTC",
+            data: [10, 15, 8, 12, 18, 14, 20] // مقادیر نمونه
+        }],
+        chart: {
+            type: 'line',
+            width: '60%',
+            toolbar: {
+                show: false // این خط تمام آیکون‌های ابزار (زوم، ریست و غیره) را پنهان می‌کند
+            }
+        },
+        colors: ['#64CFF9'],
+        stroke: {
+            width: 2,
+            curve: 'straight'
+        },
+        xaxis: {
+            labels: {
+                show: false // پنهان کردن برچسب‌های محور افقی
+            },
+            axisBorder: {
+                show: false // پنهان کردن خط مرزی محور افقی
+            },
+            axisTicks: {
+                show: false // پنهان کردن تیک‌های محور افقی
+            }
+        },
+        yaxis: {
+            labels: {
+                show: false // پنهان کردن برچسب‌های محور عمودی
+            },
+            axisBorder: {
+                show: false // پنهان کردن خط مرزی محور عمودی
+            },
+            axisTicks: {
+                show: false // پنهان کردن تیک‌های محور عمودی
+            }
+        },
+        grid: {
+            show: false // پنهان کردن خطوط شبکه
+        }
+    };
+    let optionsEth = {
+        series: [{
+            name: "ETH",
+            data: [10, 15, 8, 12, 18, 14, 20] // مقادیر نمونه
+        }],
+        chart: {
+            type: 'line',
+            width: '60%',
+            toolbar: {
+                show: false // این خط تمام آیکون‌های ابزار (زوم، ریست و غیره) را پنهان می‌کند
+            }
+        },
+        colors: ['#3A6FF8'],
+        stroke: {
+            width: 2,
+            curve: 'straight'
+        },
+        xaxis: {
+            labels: {
+                show: false // پنهان کردن برچسب‌های محور افقی
+            },
+            axisBorder: {
+                show: false // پنهان کردن خط مرزی محور افقی
+            },
+            axisTicks: {
+                show: false // پنهان کردن تیک‌های محور افقی
+            }
+        },
+        yaxis: {
+            labels: {
+                show: false // پنهان کردن برچسب‌های محور عمودی
+            },
+            axisBorder: {
+                show: false // پنهان کردن خط مرزی محور عمودی
+            },
+            axisTicks: {
+                show: false // پنهان کردن تیک‌های محور عمودی
+            }
+        },
+        grid: {
+            show: false // پنهان کردن خطوط شبکه
+        }
+    };
+    let optionsSol = {
+        series: [{
+            name: "SOL",
+            data: [10, 15, 8, 12, 18, 14, 12] // مقادیر نمونه
+        }],
+        chart: {
+            type: 'line',
+            width: '60%',
+            toolbar: {
+                show: false // این خط تمام آیکون‌های ابزار (زوم، ریست و غیره) را پنهان می‌کند
+            }
+        },
+        colors: ['#1ECB4F'],
+        stroke: {
+            width: 2,
+            curve: 'straight'
+        },
+        xaxis: {
+            labels: {
+                show: false // پنهان کردن برچسب‌های محور افقی
+            },
+            axisBorder: {
+                show: false // پنهان کردن خط مرزی محور افقی
+            },
+            axisTicks: {
+                show: false // پنهان کردن تیک‌های محور افقی
+            }
+        },
+        yaxis: {
+            labels: {
+                show: false // پنهان کردن برچسب‌های محور عمودی
+            },
+            axisBorder: {
+                show: false // پنهان کردن خط مرزی محور عمودی
+            },
+            axisTicks: {
+                show: false // پنهان کردن تیک‌های محور عمودی
+            }
+        },
+        grid: {
+            show: false // پنهان کردن خطوط شبکه
+        }
+    };
 
-    var chart = new ApexCharts(document.querySelector("#bitcoin-chart"), options);
-    chart.render();
+    let chartBtc = new ApexCharts(document.querySelector("#bitcoin-chart"), optionsBtc);
+    chartBtc.render();
+    let chartLtc = new ApexCharts(document.querySelector("#litecoin-chart"), optionsLtc);
+    chartLtc.render();
+    let chartEth = new ApexCharts(document.querySelector("#ethereum-chart"), optionsEth);
+    chartEth.render();
+    let chartSol = new ApexCharts(document.querySelector("#solana-chart"), optionsSol);
+    chartSol.render();
 })()
 
 // *********************************************************events
