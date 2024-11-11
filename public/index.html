@@ -500,39 +500,50 @@
                     <svg class="w-6 h-6 text-zinc-300">
                         <use href="#arrow-down"></use>
                     </svg>
-                    <ul
-                        class="bg-white dark:bg-gray-800 rounded-lg absolute top-12 left-0 w-40 p-2 space-y-3 transition-all delay-100 opacity-0 group-hover:opacity-100 invisible group-hover:visible">
-                        <li class="flex  items-center gap-1">
-                            <svg class="w-5 h-5 text-inherit ">
-                                <use href="#dashboard"></use>
-                            </svg>
-                            <a href="">داشبورد</a>
-                        </li>
-                        <li class="flex  items-center gap-1">
-                            <svg class="w-5 h-5 text-inherit ">
-                                <use href="#chart"></use>
-                            </svg>
-                            <a href="">نمودار ها</a>
-                        </li>
-                        <li class="flex  items-center gap-1">
-                            <svg class="w-5 h-5 text-inherit ">
-                                <use href="#mail"></use>
-                            </svg>
-                            <a href="">صندوق پیام ها</a>
-                        </li>
-                        <li class="flex  items-center gap-1">
-                            <svg class="w-5 h-5 text-inherit ">
-                                <use href="#setting"></use>
-                            </svg>
-                            <a href="">تنظیمات</a>
-                        </li>
-                        <li class="flex  items-center gap-1">
-                            <svg class="w-5 h-5 text-inherit ">
-                                <use href="#logout"></use>
-                            </svg>
-                            <a href="">خروج</a>
-                        </li>
-                    </ul>
+                    <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg absolute top-12 left-0 w-80 sm:w-[400px] h-[218px]  transition-all delay-100 opacity-0  group-hover:opacity-100 invisible  group-hover:visible overflow-y-auto z-50"
+                        id="profile-panel" dir="ltr">
+                        <div dir="rtl">
+                            <div class="flex items-center gap-1 border-b border-b-gray-200/30 h-12 px-3 py-2">
+                                <button>
+                                    <svg class="w-5 h-5 text-zinc-300">
+                                        <use href="#search"></use>
+                                    </svg>
+                                </button>
+                                <input type="text" placeholder="جستجو..."
+                                    class="font-light w-full h-full outline-none bg-transparent">
+                            </div>
+                            <ul class="space-y-4 py-3 px-5">
+                                <li class="flex items-center gap-2.5">
+                                    <input type="checkbox" checked>
+                                    <img src="images/profile.png"
+                                        class="w-11 h-11 object-cover rounded-full overflow-hidden" alt="">
+                                    <div class="flex flex-col gap-1 ">
+                                        <span>مبین</span>
+                                        <span class="text-zinc-400 text-xs font-light">mobin@gmail.com</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <input type="checkbox">
+                                    <img src="images/profile2.png"
+                                        class="w-11 h-11 object-cover rounded-full overflow-hidden" alt="">
+                                    <div class="flex flex-col gap-1 ">
+                                        <span>علیرضا</span>
+                                        <span class="text-zinc-400 text-xs font-light">alireza@gmail.com</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <input type="checkbox">
+                                    <img src="images/profile2.png"
+                                        class="w-11 h-11 object-cover rounded-full overflow-hidden" alt="">
+                                    <div class="flex flex-col gap-1 ">
+                                        <span>امیر</span>
+                                        <span class="text-zinc-400 text-xs font-light">amir@gmail.com</span>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

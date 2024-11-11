@@ -8,6 +8,27 @@
     }
 
     /* width */
+    #profile-panel::-webkit-scrollbar {
+        width: 7.5px;
+    }
+
+    /* Track */
+    #profile-panel::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    /* Handle */
+    #profile-panel::-webkit-scrollbar-thumb {
+        background: rgba(182, 191, 200, 0.3);
+        border-radius: 20px;
+    }
+
+    /* Handle on hover */
+    #profile-panel::-webkit-scrollbar-thumb:hover {
+        background: rgba(182, 191, 200, 1)
+    }
+
+    /* width */
     .notific-wrapper::-webkit-scrollbar {
         width: 2px;
     }
