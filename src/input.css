@@ -8,6 +8,27 @@
     }
 
     /* width */
+    #notfic__wrapper::-webkit-scrollbar {
+        width: 7.5px;
+    }
+
+    /* Track */
+    #notfic__wrapper::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    /* Handle */
+    #notfic__wrapper::-webkit-scrollbar-thumb {
+        background: rgba(182, 191, 200, 0.3);
+        border-radius: 20px;
+    }
+
+    /* Handle on hover */
+    #notfic__wrapper::-webkit-scrollbar-thumb:hover {
+        background: rgba(182, 191, 200, 1)
+    }
+
+    /* width */
     #profile-panel::-webkit-scrollbar {
         width: 7.5px;
     }
