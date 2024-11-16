@@ -214,19 +214,15 @@
                     stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
             </g>
         </symbol>
-        <symbol id="user" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="user" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
             <g id="SVGRepo_iconCarrier">
-                <path opacity="0.5"
-                    d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
-                    fill="currentColor"></path>
                 <path
-                    d="M16.807 19.0112C15.4398 19.9504 13.7841 20.5 12 20.5C10.2159 20.5 8.56023 19.9503 7.193 19.0111C6.58915 18.5963 6.33109 17.8062 6.68219 17.1632C7.41001 15.8302 8.90973 15 12 15C15.0903 15 16.59 15.8303 17.3178 17.1632C17.6689 17.8062 17.4108 18.5964 16.807 19.0112Z"
+                    d="M8 7C9.65685 7 11 5.65685 11 4C11 2.34315 9.65685 1 8 1C6.34315 1 5 2.34315 5 4C5 5.65685 6.34315 7 8 7Z"
                     fill="currentColor"></path>
-                <path
-                    d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3432 6 9.00004 7.34315 9.00004 9C9.00004 10.6569 10.3432 12 12 12Z"
-                    fill="currentColor"></path>
+                <path d="M14 12C14 10.3431 12.6569 9 11 9H5C3.34315 9 2 10.3431 2 12V15H14V12Z" fill="currentColor">
+                </path>
             </g>
         </symbol>
         <symbol id="line-chart" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -389,7 +385,26 @@
         </div>
         <!-- main wrapper -->
         <div class="  my-7 lg:m-7 text-gray-900 dark:text-white">
-
+            <!-- carts wrapper -->
+            <div class="flex justify-between items-center gap-3">
+                <div class="relative bg-white dark:bg-gray-800 rounded-lg flex-1 ">
+                    <!-- cart iocn -->
+                    <div
+                        class="flex justify-center items-center absolute right-4 -top-5 bg-gray-900 dark:bg-gray-600 w-16 h-16 rounded-lg">
+                        <svg class="text-white  w-7 h-7">
+                            <use href="#user"></use>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col gap-1 items-end justify-center p-3">
+                        <span class="text-sm text-zinc-400 ">تعداد کاربران</span>
+                        <span class="text-lg font-bold">1500</span>
+                    </div>
+                    <div class="border-t dark:border-t-gray-600">
+                        <p class="p-3 font-light"><span class="text-green-500 font-bold">15%</span> بیشتر از هفته قبل
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <!-- start sidebar -->
