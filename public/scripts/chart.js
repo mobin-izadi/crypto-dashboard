@@ -1,5 +1,10 @@
-(function charts() {
+let isDarkMode = localStorage.getItem('dark') == 'true' ? true : false;
+const themeButtons = document.querySelectorAll('.theme-mode')
 
+
+
+function charts() {
+    // چارت کمپین
     let campaignChartOptions = {
         chart: {
             type: 'line',
@@ -61,7 +66,7 @@
     };
     let campaignChart = new ApexCharts(document.querySelector("#campaign-chart"), campaignChartOptions);
     campaignChart.render();
-
+    // چارت فروش
     let saleOptions = {
         chart: {
             type: 'line',
@@ -130,24 +135,33 @@
     };
     let saleChart = new ApexCharts(document.querySelector("#sale-chart"), saleOptions);
     saleChart.render();
+    // چارت کاربران
     let userChart = new ApexCharts(document.querySelector("#user-chart"), saleOptions);
     userChart.render();
-
+    // چارت امیتاز
     let rateOptions = {
         series: [70, 20, 5, 3, 2],
         chart: {
             width: '100%',
             height: '100%',
             type: 'pie',
+            foreColor: isDarkMode ? '#FFFFFF' : '#000000'
         },
         labels: ['5', '4', '3', '2', '1'],
+        dataLabels: {
+            style: {
+                colors: isDarkMode ? ['#FFFFFF'] : ['#000000'] // رنگ لیبل‌ها
+            }
+        },
+        tooltip: {
+            theme: isDarkMode ? 'dark' : 'light' // تنظیم تولتیپ برای دارک/لایت
+        },
 
     };
-
     let rateChart = new ApexCharts(document.querySelector("#user-rate"), rateOptions);
     rateChart.render();
-
-    var rate2Options = {
+    // چارت نرخ تبدیل و بازگشت کاربران
+    let rate2Options = {
         series: [{
             name: ' نرخ تبدیل',
             data: [31, 40, 28, 51, 42, 109, 100]
@@ -158,7 +172,8 @@
         chart: {
             height: '100%',
             width: '100%',
-            type: 'area'
+            type: 'area',
+            foreColor: isDarkMode ? '#FFFFFF' : '#000000' // رنگ پیش‌فرض متن‌ها
         },
         dataLabels: {
             enabled: false
@@ -168,16 +183,80 @@
         },
         xaxis: {
             type: 'datetime',
-            categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+            categories: [
+                "2018-09-19T00:00:00.000Z",
+                "2018-09-19T01:30:00.000Z",
+                "2018-09-19T02:30:00.000Z",
+                "2018-09-19T03:30:00.000Z",
+                "2018-09-19T04:30:00.000Z",
+                "2018-09-19T05:30:00.000Z",
+                "2018-09-19T06:30:00.000Z"
+            ],
+            labels: {
+                style: {
+                    colors: isDarkMode ? '#FFFFFF' : '#000000' // رنگ لیبل‌های محور X
+                }
+            }
+        },
+        yaxis: {
+            labels: {
+                style: {
+                    colors: isDarkMode ? '#FFFFFF' : '#000000' // رنگ لیبل‌های محور Y
+                }
+            }
         },
         tooltip: {
-            x: {
-                format: 'dd/MM/yy HH:mm'
-            },
-        },
+            theme: isDarkMode ? 'dark' : 'light' // تغییر رنگ پس‌زمینه و متن تولتیپ
+        }
     };
-
-    var rate2Chart = new ApexCharts(document.querySelector("#user-rate2"), rate2Options);
+    let rate2Chart = new ApexCharts(document.querySelector("#user-rate2"), rate2Options);
     rate2Chart.render();
+    // تابعی برای تغییر تم در لحظه
+    function toggleDarkMode() {
+        isDarkMode = !isDarkMode;
+        rate2Chart.updateOptions({
+            chart: {
+                foreColor: isDarkMode ? '#FFFFFF' : '#000000'
+            },
+            xaxis: {
+                labels: {
+                    style: {
+                        colors: isDarkMode ? '#FFFFFF' : '#000000'
+                    }
+                }
+            },
+            yaxis: {
+                labels: {
+                    style: {
+                        colors: isDarkMode ? '#FFFFFF' : '#000000'
+                    }
+                }
+            },
+            tooltip: {
+                theme: isDarkMode ? 'dark' : 'light'
+            }
+        });
 
-})();
+        rateChart.updateOptions({
+            chart: {
+                foreColor: isDarkMode ? '#FFFFFF' : '#000000'
+            },
+            dataLabels: {
+                style: {
+                    colors: isDarkMode ? ['#FFFFFF'] : ['#000000'] // رنگ لیبل‌ها
+                }
+            },
+            tooltip: {
+                theme: isDarkMode ? 'dark' : 'light' // تنظیم تولتیپ برای دارک/لایت
+            },
+        });
+    }
+    themeButtons.forEach(button => {
+        button.addEventListener('click', toggleDarkMode)
+    })
+
+}
+
+
+window.addEventListener('load', charts)
+

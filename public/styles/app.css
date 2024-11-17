@@ -856,6 +856,14 @@ body {
   margin-top: 2rem;
 }
 
+.mt-24 {
+  margin-top: 6rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -1740,6 +1748,11 @@ body {
 .dark\:text-zinc-300:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(212 212 216 / var(--tw-text-opacity));
+}
+
+.dark\:\!text-white:is(.dark *) {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
 .dark\:hover\:bg-gray-500\/20:hover:is(.dark *) {
