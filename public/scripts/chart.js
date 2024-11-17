@@ -123,13 +123,61 @@
             strokeColors: '#FFFFFF', // رنگ حاشیه دایره‌ها
             strokeWidth: 2, // ضخامت حاشیه
             hover: {
-              size: 8 // اندازه دایره هنگام هاور
+                size: 8 // اندازه دایره هنگام هاور
             }
-          },
+        },
 
     };
     let saleChart = new ApexCharts(document.querySelector("#sale-chart"), saleOptions);
     saleChart.render();
     let userChart = new ApexCharts(document.querySelector("#user-chart"), saleOptions);
     userChart.render();
+
+    let rateOptions = {
+        series: [70, 20, 5, 3, 2],
+        chart: {
+            width: '100%',
+            height: '100%',
+            type: 'pie',
+        },
+        labels: ['5', '4', '3', '2', '1'],
+
+    };
+
+    let rateChart = new ApexCharts(document.querySelector("#user-rate"), rateOptions);
+    rateChart.render();
+
+    var rate2Options = {
+        series: [{
+            name: ' نرخ تبدیل',
+            data: [31, 40, 28, 51, 42, 109, 100]
+        }, {
+            name: 'نرخ بازگشت کاربران',
+            data: [11, 32, 45, 32, 34, 52, 41]
+        }],
+        chart: {
+            height: '100%',
+            width: '100%',
+            type: 'area'
+        },
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            curve: 'smooth'
+        },
+        xaxis: {
+            type: 'datetime',
+            categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+        },
+        tooltip: {
+            x: {
+                format: 'dd/MM/yy HH:mm'
+            },
+        },
+    };
+
+    var rate2Chart = new ApexCharts(document.querySelector("#user-rate2"), rate2Options);
+    rate2Chart.render();
+
 })();
