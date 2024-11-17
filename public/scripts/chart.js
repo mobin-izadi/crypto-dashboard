@@ -143,14 +143,17 @@ function charts() {
         series: [70, 20, 5, 3, 2],
         chart: {
             width: '100%',
-            height: '100%',
+            height: 211,
             type: 'pie',
-            foreColor: isDarkMode ? '#FFFFFF' : '#000000'
+            foreColor: isDarkMode ? '#FFFFFF' : '#000000',
+
         },
         labels: ['5', '4', '3', '2', '1'],
         dataLabels: {
             style: {
-                colors: isDarkMode ? ['#FFFFFF'] : ['#000000'] // رنگ لیبل‌ها
+                fontSize: '10px', // اندازه فونت لیبل‌ها
+                fontFamily: 'IRANYekanX, sans-serif', // فونت لیبل‌ها
+                fontWeight: 'light', // وزن فونت
             }
         },
         tooltip: {
@@ -240,11 +243,6 @@ function charts() {
         rateChart.updateOptions({
             chart: {
                 foreColor: isDarkMode ? '#FFFFFF' : '#000000'
-            },
-            dataLabels: {
-                style: {
-                    colors: isDarkMode ? ['#FFFFFF'] : ['#000000'] // رنگ لیبل‌ها
-                }
             },
             tooltip: {
                 theme: isDarkMode ? 'dark' : 'light' // تنظیم تولتیپ برای دارک/لایت
