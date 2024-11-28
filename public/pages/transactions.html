@@ -301,6 +301,21 @@
                 </g>
             </g>
         </symbol>
+        <symbol id="dots" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+                <path
+                    d="M4 8C4 9.10457 3.10457 10 2 10C0.895431 10 0 9.10457 0 8C0 6.89543 0.895431 6 2 6C3.10457 6 4 6.89543 4 8Z"
+                    fill="currentColor"></path>
+                <path
+                    d="M10 8C10 9.10457 9.10457 10 8 10C6.89543 10 6 9.10457 6 8C6 6.89543 6.89543 6 8 6C9.10457 6 10 6.89543 10 8Z"
+                    fill="currentColor"></path>
+                <path
+                    d="M14 10C15.1046 10 16 9.10457 16 8C16 6.89543 15.1046 6 14 6C12.8954 6 12 6.89543 12 8C12 9.10457 12.8954 10 14 10Z"
+                    fill="currentColor"></path>
+            </g>
+        </symbol>
     </svg>
 
     <!-- start header -->
@@ -434,11 +449,12 @@
             <div class="flex justify-between items-center my-5 flex-wrap sm:flex-nowrap gap-1">
                 <!-- filtering right -->
                 <div class="space-x-1 sm:space-x-3">
-                    <button class="text-sm border rounded-md py-1 px-2 text-purple-500 bg-purple-200 ml-3">همه</button>
-                    <button class="text-sm border rounded-md py-1 px-2 ">1 هفته</button>
-                    <button class="text-sm border rounded-md py-1 px-2 ">1 ماه</button>
-                    <button class="text-sm border rounded-md py-1 px-2 ">6 ماه</button>
-                    <button class="text-sm border rounded-md py-1 px-2 ">1 سال</button>
+                    <button
+                        class="text-sm border rounded-md py-1 px-2 text-purple-500 bg-purple-200 ml-1 sm:ml-3 filter__btn">همه</button>
+                    <button class="text-sm border rounded-md py-1 px-2  filter__btn">1 هفته</button>
+                    <button class="text-sm border rounded-md py-1 px-2  filter__btn">1 ماه</button>
+                    <button class="text-sm border rounded-md py-1 px-2  filter__btn">6 ماه</button>
+                    <button class="text-sm border rounded-md py-1 px-2  filter__btn">1 سال</button>
                 </div>
                 <!-- filtering right -->
                 <div class="relative">
@@ -448,7 +464,7 @@
                             <use href="#filter"></use>
                         </svg>
                     </button>
-                    <div class="fixed mx-auto left-0 right-0 sm:right-auto  sm:absolute sm:-bottom-36 sm:left-0  bg-white w-48 h-32 rounded-lg z-30 p-2 space-y-3 hidden filter-wrapper"
+                    <div class="fixed mx-auto left-0 right-0 sm:right-auto  sm:absolute sm:-bottom-36 sm:left-0  bg-white dark:bg-gray-800 w-48 h-32 rounded-lg z-30 p-2 space-y-3 hidden filter-wrapper"
                         id="">
                         <label class="flex items-center justify-between cursor-pointer cur ">
                             <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">پرداخت
@@ -476,6 +492,95 @@
                     </div>
                 </div>
             </div>
+            <!-- table -->
+            <table class="w-full ">
+                <thead>
+                    <tr class=" *:pb-2 *:font-light *:text-zinc-500 *:text-sm ">
+                        <th>مشتری</th>
+                        <th>شماره پیگیری</th>
+                        <th>مبلغ</th>
+                        <th>تاریخ</th>
+                        <th>وضعیت</th>
+                        <th>عملیات</th>
+                    </tr>
+                </thead>
+                <tbody class="*:border-b *:dark:border-b-gray-600 *:h-20">
+                    <tr class="*:text-center *:align-middle">
+                        <td>
+                            <div class="flex items-center justify-center gap-2">
+                                <img src="../images/profile.png"
+                                    class="w-11 h-11 object-cover rounded-full overflow-hidden" alt="">
+                                <span>مبین</span>
+                            </div>
+                        </td>
+                        <td class="font-bold text-green-500">254835</td>
+                        <td class="text-sm">10,000,000</td>
+                        <td class="text-sm text-zinc-500">01/03/1377</td>
+                        <td>
+                            <span class="text-xs text-green-500 bg-white py-1 px-3 rounded-full">پرداخت شده</span>
+                        </td>
+                        <td>
+                            <button>
+                                <svg class="w-5 h-5">
+                                    <use href="#dots">
+
+                                    </use>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="*:text-center *:align-middle">
+                        <td>
+                            <div class="flex items-center justify-center gap-2">
+                                <img src="../images/profile.png"
+                                    class="w-11 h-11 object-cover rounded-full overflow-hidden" alt="">
+                                <span>مبین</span>
+                            </div>
+                        </td>
+                        <td class="font-bold text-green-500">254835</td>
+                        <td class="text-sm">10,000,000</td>
+                        <td class="text-sm text-zinc-500">01/03/1377</td>
+                        <td>
+                            <span class="text-xs text-yellow-500 bg-white py-1 px-3 rounded-full">درحال انجام</span>
+                        </td>
+                        <td>
+                            <button>
+                                <svg class="w-5 h-5">
+                                    <use href="#dots">
+
+                                    </use>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="*:text-center *:align-middle">
+                        <td>
+                            <div class="flex items-center justify-center gap-2">
+                                <img src="../images/profile.png"
+                                    class="w-11 h-11 object-cover rounded-full overflow-hidden" alt="">
+                                <span>مبین</span>
+                            </div>
+                        </td>
+                        <td class="font-bold text-green-500">254835</td>
+                        <td class="text-sm">10,000,000</td>
+                        <td class="text-sm text-zinc-500">
+                            01/03/1377
+                        </td>
+                        <td>
+                            <span class="text-xs text-red-500 bg-white py-1 px-3 rounded-full ">پرداخت نشده</span>
+                        </td>
+                        <td>
+                            <button>
+                                <svg class="w-5 h-5">
+                                    <use href="#dots">
+
+                                    </use>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
         </div>
     </main>
