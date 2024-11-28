@@ -494,8 +494,8 @@
                 </div>
             </div>
             <!-- table -->
-            <table class="w-full ">
-                <thead>
+            <table class="w-full">
+                <thead class="sr-only md:not-sr-only">
                     <tr class=" *:pb-2 *:font-light *:text-zinc-500 *:text-sm ">
                         <th>مشتری</th>
                         <th>شماره پیگیری</th>
@@ -506,22 +506,25 @@
                     </tr>
                 </thead>
                 <tbody class="*:border-b *:dark:border-b-gray-600 ">
-                    <tr class="*:text-center *:align-middle *:py-4">
-                        <td>
+                    <tr class="*:text-center *:align-middle *:py-4 *:relative *:block md:*:table-cell ">
+                        <td class="transaction-table__row" data-label="مشتری">
                             <div class="flex items-center justify-center gap-2">
                                 <img src="../images/profile.png"
                                     class="w-11 h-11 object-cover rounded-full overflow-hidden" alt="">
                                 <span>مبین</span>
                             </div>
                         </td>
-                        <td class="font-bold text-green-500">254835</td>
-                        <td class="text-sm">10,000,000</td>
-                        <td class="text-sm text-zinc-500">01/03/1377</td>
-                        <td>
+                        <td class="font-bold text-green-500 transaction-table__row" data-label="پیگیری">
+                            254835</td>
+                        <td class="text-sm transaction-table__row" data-label="مبلغ">
+                            10,000,000</td>
+                        <td class="text-sm text-zinc-500  transaction-table__row " data-label="تاریخ">
+                            01/03/1377</td>
+                        <td class="transaction-table__row" data-label="وضعیت">
                             <span class="text-xs text-green-500 bg-white dark:bg-gray-800 py-1 px-3 rounded-full">پرداخت
                                 شده</span>
                         </td>
-                        <td>
+                        <td class="transaction-table__row" data-label="عملیات">
                             <button>
                                 <svg class="w-5 h-5">
                                     <use href="#dots">
@@ -531,22 +534,25 @@
                             </button>
                         </td>
                     </tr>
-                    <tr class="*:text-center *:align-middle *:py-4">
-                        <td>
+                    <tr class="*:text-center *:align-middle *:py-4 *:relative *:block md:*:table-cell ">
+                        <td class="transaction-table__row" data-label="مشتری">
                             <div class="flex items-center justify-center gap-2">
                                 <img src="../images/profile.png"
                                     class="w-11 h-11 object-cover rounded-full overflow-hidden" alt="">
                                 <span>مبین</span>
                             </div>
                         </td>
-                        <td class="font-bold text-green-500">254835</td>
-                        <td class="text-sm">10,000,000</td>
-                        <td class="text-sm text-zinc-500">01/03/1377</td>
-                        <td>
-                            <span class="text-xs text-yellow-500 bg-white dark:bg-gray-800 py-1 px-3 rounded-full">درحال
-                                انجام</span>
+                        <td class="font-bold text-green-500 transaction-table__row" data-label="پیگیری">
+                            254835</td>
+                        <td class="text-sm transaction-table__row" data-label="مبلغ">
+                            10,000,000</td>
+                        <td class="text-sm text-zinc-500  transaction-table__row " data-label="تاریخ">
+                            01/03/1377</td>
+                        <td class="transaction-table__row" data-label="وضعیت">
+                            <span class="text-xs text-yellow-500 bg-white dark:bg-gray-800 py-1 px-3 rounded-full">
+                                درحال انجام</span>
                         </td>
-                        <td>
+                        <td class="transaction-table__row" data-label="عملیات">
                             <button>
                                 <svg class="w-5 h-5">
                                     <use href="#dots">
@@ -556,24 +562,25 @@
                             </button>
                         </td>
                     </tr>
-                    <tr class="*:text-center *:align-middle *:py-4">
-                        <td>
+                    <tr class="*:text-center *:align-middle *:py-4 *:relative *:block md:*:table-cell ">
+                        <td class="transaction-table__row" data-label="مشتری">
                             <div class="flex items-center justify-center gap-2">
                                 <img src="../images/profile.png"
                                     class="w-11 h-11 object-cover rounded-full overflow-hidden" alt="">
                                 <span>مبین</span>
                             </div>
                         </td>
-                        <td class="font-bold text-green-500">254835</td>
-                        <td class="text-sm">10,000,000</td>
-                        <td class="text-sm text-zinc-500">
-                            01/03/1377
-                        </td>
-                        <td>
-                            <span class="text-xs text-red-500 bg-white dark:bg-gray-800 py-1 px-3 rounded-full ">پرداخت
+                        <td class="font-bold text-green-500 transaction-table__row" data-label="پیگیری">
+                            254835</td>
+                        <td class="text-sm transaction-table__row" data-label="مبلغ">
+                            10,000,000</td>
+                        <td class="text-sm text-zinc-500  transaction-table__row " data-label="تاریخ">
+                            01/03/1377</td>
+                        <td class="transaction-table__row" data-label="وضعیت">
+                            <span class="text-xs text-red-500 bg-white dark:bg-gray-800 py-1 px-3 rounded-full">پرداخت
                                 نشده</span>
                         </td>
-                        <td>
+                        <td class="transaction-table__row" data-label="عملیات">
                             <button>
                                 <svg class="w-5 h-5">
                                     <use href="#dots">
@@ -583,6 +590,7 @@
                             </button>
                         </td>
                     </tr>
+
                 </tbody>
             </table>
 

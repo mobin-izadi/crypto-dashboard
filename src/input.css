@@ -3,122 +3,126 @@
 @tailwind utilities;
 
 @layer components {
-    #chart-area tspan {
-        @apply dark:stroke-zinc-300
-    }
+  .transaction-table__row {
+    @apply before:text-black before:font-light before:dark:text-white before:content-[attr(data-label)] before:absolute before:right-0 before:top-0 before:bottom-0 before:flex before:items-center md:before:hidden;
+  }
 
-    /* width */
-    #notfic__wrapper::-webkit-scrollbar {
-        width: 7.5px;
-    }
+  #chart-area tspan {
+    @apply dark:stroke-zinc-300;
+  }
 
-    /* Track */
-    #notfic__wrapper::-webkit-scrollbar-track {
-        background: transparent;
-    }
+  /* width */
+  #notfic__wrapper::-webkit-scrollbar {
+    width: 7.5px;
+  }
 
-    /* Handle */
-    #notfic__wrapper::-webkit-scrollbar-thumb {
-        background: rgba(182, 191, 200, 0.3);
-        border-radius: 20px;
-    }
+  /* Track */
+  #notfic__wrapper::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
-    /* Handle on hover */
-    #notfic__wrapper::-webkit-scrollbar-thumb:hover {
-        background: rgba(182, 191, 200, 1)
-    }
+  /* Handle */
+  #notfic__wrapper::-webkit-scrollbar-thumb {
+    background: rgba(182, 191, 200, 0.3);
+    border-radius: 20px;
+  }
 
-    /* width */
-    #profile-panel::-webkit-scrollbar {
-        width: 7.5px;
-    }
+  /* Handle on hover */
+  #notfic__wrapper::-webkit-scrollbar-thumb:hover {
+    background: rgba(182, 191, 200, 1);
+  }
 
-    /* Track */
-    #profile-panel::-webkit-scrollbar-track {
-        background: transparent;
-    }
+  /* width */
+  #profile-panel::-webkit-scrollbar {
+    width: 7.5px;
+  }
 
-    /* Handle */
-    #profile-panel::-webkit-scrollbar-thumb {
-        background: rgba(182, 191, 200, 0.3);
-        border-radius: 20px;
-    }
+  /* Track */
+  #profile-panel::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
-    /* Handle on hover */
-    #profile-panel::-webkit-scrollbar-thumb:hover {
-        background: rgba(182, 191, 200, 1)
-    }
+  /* Handle */
+  #profile-panel::-webkit-scrollbar-thumb {
+    background: rgba(182, 191, 200, 0.3);
+    border-radius: 20px;
+  }
 
-    /* width */
-    .notific-wrapper::-webkit-scrollbar {
-        width: 2px;
-    }
+  /* Handle on hover */
+  #profile-panel::-webkit-scrollbar-thumb:hover {
+    background: rgba(182, 191, 200, 1);
+  }
 
-    /* Track */
-    .notific-wrapper::-webkit-scrollbar-track {
-        background: #f1f1f1;
-    }
+  /* width */
+  .notific-wrapper::-webkit-scrollbar {
+    width: 2px;
+  }
 
-    /* Handle */
-    .notific-wrapper::-webkit-scrollbar-thumb {
-        background: #888;
-    }
+  /* Track */
+  .notific-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
 
-    /* Handle on hover */
-    .notific-wrapper::-webkit-scrollbar-thumb:hover {
-        background: #555;
-    }
+  /* Handle */
+  .notific-wrapper::-webkit-scrollbar-thumb {
+    background: #888;
+  }
 
-    /* width */
-    .sidebar::-webkit-scrollbar {
-        width: 2px;
-    }
+  /* Handle on hover */
+  .notific-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
-    /* Track */
-    .sidebar::-webkit-scrollbar-track {
-        background: #f1f1f1;
-    }
+  /* width */
+  .sidebar::-webkit-scrollbar {
+    width: 2px;
+  }
 
-    /* Handle */
-    .sidebar::-webkit-scrollbar-thumb {
-        background: #888;
-    }
+  /* Track */
+  .sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
 
-    /* Handle on hover */
-    .sidebar::-webkit-scrollbar-thumb:hover {
-        background: #555;
-    }
+  /* Handle */
+  .sidebar::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  .sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 }
 
 @layer base {
-    @font-face {
-        font-family: IRANYekanX;
-        font-display: swap;
-        font-style: normal;
-        font-weight: 300;
-        src: url('../fonts/iran-yekan/woff/IRANYekanX-Light.woff') format('woff'),
-            url('../fonts/iran-yekan/woff2/IRANYekanX-Light.woff2') format('woff2');
-    }
+  @font-face {
+    font-family: IRANYekanX;
+    font-display: swap;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/iran-yekan/woff/IRANYekanX-Light.woff') format('woff'),
+      url('../fonts/iran-yekan/woff2/IRANYekanX-Light.woff2') format('woff2');
+  }
 
-    @font-face {
-        font-family: IRANYekanX;
-        font-display: swap;
-        font-style: normal;
-        font-weight: 700;
-        src: url('../fonts/iran-yekan/woff/IRANYekanX-Bold.woff') format('woff'),
-            url('../fonts/iran-yekan/woff2/IRANYekanX-Bold.woff2') format('woff2');
-    }
+  @font-face {
+    font-family: IRANYekanX;
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/iran-yekan/woff/IRANYekanX-Bold.woff') format('woff'),
+      url('../fonts/iran-yekan/woff2/IRANYekanX-Bold.woff2') format('woff2');
+  }
 
-    @font-face {
-        font-family: IRANYekanX;
-        font-display: swap;
-        font-style: normal;
-        font-weight: 400;
-        src: url('../fonts/iran-yekan/woff/IRANYekanX-Regular.woff') format('woff'),
-            url('../fonts/iran-yekan/woff2/IRANYekanX-Regular.woff2') format('woff2');
-    }
+  @font-face {
+    font-family: IRANYekanX;
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/iran-yekan/woff/IRANYekanX-Regular.woff') format('woff'),
+      url('../fonts/iran-yekan/woff2/IRANYekanX-Regular.woff2') format('woff2');
+  }
 
-    body {
-        @apply font-iranyekan
-    }
+  body {
+    @apply font-iranyekan;
+  }
 }
