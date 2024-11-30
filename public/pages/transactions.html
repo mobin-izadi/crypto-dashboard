@@ -8,6 +8,9 @@
     <title>تراکنش ها</title>
     <link rel="shortcut icon" href="../images/favicon.png" type="image/png">
     <link rel="stylesheet" href="../styles/app.css">
+
+
+
 </head>
 
 <body
@@ -505,7 +508,7 @@
                         <th>عملیات</th>
                     </tr>
                 </thead>
-                <tbody class="*:border-b *:dark:border-b-gray-600 ">
+                <tbody class="*:border-b *:dark:border-b-gray-600 table__body ">
                     <tr class="*:text-center *:align-middle *:py-4 *:relative *:block md:*:table-cell ">
                         <td class="transaction-table__row" data-label="مشتری">
                             <div class="flex items-center justify-center gap-2">
@@ -593,6 +596,10 @@
 
                 </tbody>
             </table>
+            <!-- pagination -->
+            <div class="pagination flex justify-center items-center gap-2 pt-3">
+
+            </div>
 
         </div>
     </main>
@@ -624,8 +631,7 @@
                     </svg>
                     <a href="/pages/chart.html" class="text-lg group-hover:scale-110 transition-all">نمودار</a>
                 </li>
-                <li
-                    class="flex items-center gap-5 transition-all bg-blue-500 rounded-[10px] p-3 hover:text-white group dark:text-zinc-300 dark:hover:text-white">
+                <li class="flex items-center gap-5 transition-all bg-blue-500 rounded-[10px] p-3 text-white group">
                     <svg class="w-8 h-8 text-inherit group-hover:scale-110 transition-all">
                         <use href="#transactions"></use>
                     </svg>
@@ -722,8 +728,9 @@
 
     </div>
     <!-- scripts -->
+    <script src="../packages/moment-jalaali/moment-jalaali.min.js"></script>
     <script src="../scripts/public.js"></script>
-    <script src="../scripts/transactions.js"></script>
+    <script src="../scripts/transactions.js" type="module"></script>
 
 </body>
 
