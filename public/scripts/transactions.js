@@ -173,17 +173,16 @@ function btnsActiveHandler() {
     let inProgress = searchParam.get('in-progress') == 'true' ? true : false
     let notPaid = searchParam.get('notPaid') == 'true' ? true : false
 
-    console.log(paid);
-    console.log(inProgress);
-    console.log(notPaid);
-    filterDayBtns.forEach(btn => {
-        btn.classList.remove('text-purple-500')
-        btn.classList.remove('bg-purple-200')
-        if (btn.dataset.day == date) {
-            btn.classList.add('text-purple-500')
-            btn.classList.add('bg-purple-200')
-        }
-    })
+    if (date) {
+        filterDayBtns.forEach(btn => {
+            btn.classList.remove('text-purple-500')
+            btn.classList.remove('bg-purple-200')
+            if (btn.dataset.day == date) {
+                btn.classList.add('text-purple-500')
+                btn.classList.add('bg-purple-200')
+            }
+        })
+    }
 
     paid && (statusFilterBtns[0].checked = true)
     inProgress && (statusFilterBtns[1].checked = true)
