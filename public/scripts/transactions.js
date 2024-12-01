@@ -1,43 +1,92 @@
-import { userTransactions } from '../scripts/data.js'
-
-
-// filter
-const filterBtn = document.getElementById('filter-btn')
-const filterWrapper = document.querySelector('.filter-wrapper')
+import { userTransactions } from './data.js'
+// filter status
+const filterStatusBtn = document.getElementById('filter-btn')
+const filterStatusWrapper = document.querySelector('.filter-wrapper')
+const statusFilterBtns = document.querySelectorAll('.filter__status')
+// filter days
 const filterDayBtns = document.querySelectorAll('.filter__btn')
-// table transactions
-let userData = null
-const tableBody = document.querySelector('.table__body')
-const paginationWrapper = document.querySelector('.pagination')
+const currentDate = new Date();
 // search param
 let searchParam = new URLSearchParams(window.location.search)
+// table transactions
+let userData = userTransactions
+const tableBody = document.querySelector('.table__body')
 
 
-
-
-//---------------------------------------------------- functions
-
-// open && close filter Wrapper
+// ------------------------------------funcs
+// filter status
 function filterWrapperShowHandler() {
-    filterWrapper.classList.toggle('hidden')
-}
-// change filter day
-function filterDauHandler(mainBtn) {
-    filterDayBtns.forEach(btn => {
-        btn.classList.remove('text-purple-500')
-        btn.classList.remove('bg-purple-200')
+    filterStatusWrapper.classList.toggle('hidden')
+    // close filter Wrapper
+    document.addEventListener('click', (event) => {
+        if (!filterStatusWrapper.contains(event.target) && !filterStatusBtn.contains(event.target)) {
+            filterStatusWrapper.classList.add('hidden')
+        }
+
     })
-
-    mainBtn.classList.add('text-purple-500')
-    mainBtn.classList.add('bg-purple-200')
 }
-// create table transactions
-function createTable(data, start, end) {
-    console.log(data);
-    console.log(start);
-    console.log(end);
+// set status filter
+function statusFilterHandler(input) {
+    if (input.dataset.status == 'Paid') {
+        searchParam.set('paid', input.checked)
+    } else if (input.dataset.status == 'not-paid') {
+        searchParam.set('notPaid', input.checked)
+    } else {
+        searchParam.set('in-progress', input.checked)
+    }
+    window.history.pushState({}, '', `${window.location.pathname}?${searchParam}`)
+    createTransactionsTable()
+}
+// create transaction table
+function createTransactionsTable() {
+    let date = searchParam.get('date')
+    let paid = searchParam.get('paid') == 'true' ? true : false
+    let inProgress = searchParam.get('in-progress') == 'true' ? true : false
+    let notPaid = searchParam.get('notPaid') == 'true' ? true : false
+    let mainData = null
+    if (date && date != 'all') {
+        mainData = filterDay(date)
+    } else {
+        mainData = userData
+    }
+    if (paid || inProgress || notPaid) {
+        mainData = mainData.filter(user => {
+            return paid && user.status == "Paid" || inProgress && user.status == "in-progress" || notPaid && user.status == "not-paid"
+        })
+    }
+    createTable(mainData)
+}
+// filter data
+function filterData(time) {
+    let date = null
+    let filterUser = userData.filter(user => {
+        date = new Date(user.date).getTime()
+        if (date > time) {
+            return user
+        }
+    })
+    return filterUser
+}
+// filter day
+function filterDay(date) {
+    let now = currentDate.getTime()
+    switch (date) {
+        case '1week':
+            return filterData(now - 604800000)
+        case '1month':
+            return filterData(now - 2630000000)
+        case '6month':
+            return filterData(now - 15552000000)
+        case '1year':
+            return filterData(now - 31536000000)
+        default:
+            break;
+    }
 
-    data = data.slice(start, end)
+}
+
+// create table transactions
+function createTable(data) {
     tableBody.innerHTML = ''
     let newTr = null
     let jalaliDate = null
@@ -80,85 +129,81 @@ function createTable(data, start, end) {
         tableBody.insertAdjacentHTML('beforeend', newTr)
 
     })
+
+
 }
-// create pagination
-function createPagination(data, count) {
-    let currentPage = searchParam.get('page')
-    let pagination = data.length % count != 0 ? (data.length / count) + 1 : (data.length / count)
-    let paginationElem = ``
-    for (let index = 0; index < pagination; index++) {
-        paginationElem += `<button class="px-2 py-1 rounded-md dark:border-gray-800 border ${currentPage == index + 1 ? `bg-blue-500 text-white` : ''} pagination__btn">${index + 1}</button>`
-    }
-    paginationWrapper.insertAdjacentHTML('beforeend', paginationElem)
-    document.querySelectorAll('.pagination__btn').forEach(btn => {
-        btn.addEventListener('click', (event) => PaginationHandler(event.target))
-    })
-}
-// PaginationHandler
-function PaginationHandler(btn) {
-    console.log(btn);
-    // remove active class
-    document.querySelectorAll('.pagination__btn').forEach(btn => {
-        btn.classList.remove('bg-blue-500')
-        btn.classList.remove('text-white')
+// filter days
+function filterDayHandler(btn) {
+    // remove active style
+    filterDayBtns.forEach(btn => {
+        btn.classList.remove('text-purple-500')
+        btn.classList.remove('bg-purple-200')
     })
     // add active style
-    btn.classList.add('bg-blue-500')
-    btn.classList.add('text-white')
-
-    let numPage = Number(btn.innerHTML)
-    searchParam.set('page', numPage)
+    btn.classList.add('text-purple-500')
+    btn.classList.add('bg-purple-200')
+    // add search param
+    let dayFilter = btn.dataset.day
+    switch (dayFilter) {
+        case 'all':
+            searchParam.set('date', 'all')
+            break;
+        case '1week':
+            searchParam.set('date', '1week')
+            break;
+        case '1month':
+            searchParam.set('date', '1month')
+            break;
+        case '6month':
+            searchParam.set('date', '6month')
+            break;
+        case '1year':
+            searchParam.set('date', '1year')
+            break;
+        default:
+            break;
+    }
     window.history.pushState({}, '', `${window.location.pathname}?${searchParam}`)
-    let start = 0
-    let end = 20
-    if (numPage > 1) {
-        start = (numPage - 1) * 20
-        end = start + 20
-    }
-    createTable(userData, start, end)
-
-
+    createTransactionsTable()
 }
 
-function createTransactionsTable(data) {
-    let numPage = Number(searchParam.get('page'))
-    let start = 0
-    let end = 20
-    if (numPage > 1) {
-        start = (numPage - 1) * 20
-        end = start + 20
-    } else {
-        searchParam.set('page', 1)
-    }
+function btnsActiveHandler() {
+    let date = searchParam.get('date')
+    let paid = searchParam.get('paid') == 'true' ? true : false
+    let inProgress = searchParam.get('in-progress') == 'true' ? true : false
+    let notPaid = searchParam.get('notPaid') == 'true' ? true : false
 
-    // createTable
-    createTable(data, start, end)
-    // create pagination
-    createPagination(data, 20)
-}
+    console.log(paid);
+    console.log(inProgress);
+    console.log(notPaid);
+    filterDayBtns.forEach(btn => {
+        btn.classList.remove('text-purple-500')
+        btn.classList.remove('bg-purple-200')
+        if (btn.dataset.day == date) {
+            btn.classList.add('text-purple-500')
+            btn.classList.add('bg-purple-200')
+        }
+    })
 
-function showTransactionsHandler() {
-
+    paid && (statusFilterBtns[0].checked = true)
+    inProgress && (statusFilterBtns[1].checked = true)
+    notPaid && (statusFilterBtns[2].checked = true)
 }
 
 
 
 
-//--------------------------------------------------------------- events
-// load page
-window.addEventListener('load', () => {
-    userData = userTransactions
-    createTransactionsTable(userData)
-})
-// open && close filter Wrapper
-filterBtn.addEventListener('click', filterWrapperShowHandler)
-document.addEventListener('click', (event) => {
-    if (!filterWrapper.contains(event.target) && !filterBtn.contains(event.target)) {
-        filterWrapper.classList.add('hidden')
-    }
 
-})
-// change filter day
+// ----------------------------------events
+// filter status
+filterStatusBtn.addEventListener('click', filterWrapperShowHandler)
+statusFilterBtns.forEach(input => input.addEventListener('change', event => statusFilterHandler(event.target)))
+// filter days
 filterDayBtns.forEach(btn => {
-    btn.addEventListener('click', (event) => filterDauHandler(event.target))
+    btn.addEventListener('click', (event) => filterDayHandler(event.target))
+})
+// window
+window.addEventListener('load', () => {
+    btnsActiveHandler()
+    createTransactionsTable()
 })
