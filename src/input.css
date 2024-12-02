@@ -10,6 +10,26 @@
   #chart-area tspan {
     @apply dark:stroke-zinc-300;
   }
+  /* width */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 7.5px;
+  }
+
+  /* Track */
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(182, 191, 200, 0.3);
+    border-radius: 20px;
+  }
+
+  /* Handle on hover */
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(182, 191, 200, 1);
+  }
 
   /* width */
   #notfic__wrapper::-webkit-scrollbar {
