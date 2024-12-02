@@ -167,7 +167,7 @@ function filterDayHandler(btn) {
     createTransactionsTable()
 }
 
-function btnsActiveHandler() {
+function checkBtnsActive() {
     let date = searchParam.get('date')
     let paid = searchParam.get('paid') == 'true' ? true : false
     let inProgress = searchParam.get('in-progress') == 'true' ? true : false
@@ -203,6 +203,6 @@ filterDayBtns.forEach(btn => {
 })
 // window
 window.addEventListener('load', () => {
-    btnsActiveHandler()
+    checkBtnsActive()
     createTransactionsTable()
 })

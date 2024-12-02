@@ -1074,6 +1074,10 @@ body {
   width: 0.5rem;
 }
 
+.w-28 {
+  width: 7rem;
+}
+
 .w-36 {
   width: 9rem;
 }
@@ -1116,10 +1120,6 @@ body {
 
 .w-full {
   width: 100%;
-}
-
-.w-28 {
-  width: 7rem;
 }
 
 .basis-1\/3 {
